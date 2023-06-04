@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+body{
+  margin-left: 20%;
+  background-image: linear-gradient(rgb(185, 185, 57),rgb(214, 142, 154));
+}
+h2 {
+  color: white;
+  font-family: "Oswald", sans-serif;
+}
+</style>
+</head>
+<body>
+  <h2 style="color: blue;">Registration Form</h2>
+  <form method="post" action="Registration">
+  <label> First Name: </label>     
+  <input type= "text" id="firstname" size="20"/> <br> <br>  
+  <label> Last Name: </label>         
+  <input type="text" id="lastname" size="20"/> <br> <br>  
+  <label> Email    :  </label>  
+  <input type="email" id="email" size="20"/> <br> <br>  
+  <label> Password    :  </label>  
+  <input type="password" id="password" size="20"/> <br> <br>
+  <label> Re-enter Password    :  </label>  
+  <input type="password" id="repassword" size="20"/> <br> <br>   
+  <label id="gender">  Gender:  </label>  
+  <input type="radio" id="male"/> Male <br>
+  &emsp;&emsp;&emsp;&nbsp;<input type="radio" id="female"/> Female 
+  <br>  <br>
+  <label>   Age:  </label>
+  <input type="text" id="age" size="20"/> <br> <br>
+  <label>   Phone Number:  </label> 
+  <input type="text" id="phone" size="15"/> <br> <br>  
+  <label>Address:</label> 
+  <textarea id="address" cols="80" rows="5" value="address">  
+  </textarea>  
+  <br> <br>  
+  <label>State:</label>
+  <input type="text" id="state" size="20"/>   
+  <br> <br>  
+  <label>Country:</label> 
+  <select id="country">
+      <option value="Country">Choose your country</option>  
+      <option value="America">America</option>  
+      <option value="England">England</option>  
+      <option value="India">India</option>  
+      <option value="London">London</option>  
+      <option value="Russia">Russia</option>  
+      <option value="Srilanka">Srilanka</option> 
+  </select>
+  <br><br>
+  <label>Languages known:</label>
+  <input type="checkbox" id="language" name="english"/>English
+  <input type="checkbox" id="language" name="kannada"/>Kannada
+  <input type="checkbox" id="language" name="tamil"/>Tamil
+  <input type="checkbox" id="language" name="hindi"/>Hindi
+  <input type="checkbox" id="language" name="telugu"/>Telugu<br>
+  <p><input type="checkbox" id="terms" checked/>Hereby I declare all the given details are true</p>
+  <input type="button" value="Register" onClick="formValidation()"/>  
+  </form> 
+<script>
+const firstname = document.getElementById("firstname");
+const lastname = document.getElementById("lastname");
+const email = document.getElementById("email");
+const password = document.getElementById("password");
+const repassword= document.getElementById("repassword");
+const gender = document.registration;
+const age=document.getElementById("age");
+const phoneNumber = document.getElementById("phone");
+const address = document.getElementById("address");
+const state = document.getElementById("state");
+const country = document.getElementById("country");
+const language = document.getElementById("language");
+const terms = document.getElementById("terms");
+function formValidation() {
+   if (firstname.value.length < 2 || firstname.value.length > 20) {
+     alert(" First Name length should be more than 2 and less than 21 charaters");
+     firstname.focus();
+     return false;
+   }
+   if (lastname.value.length < 2 || lastname.value.length > 20) {
+     alert("Last Name length should be more than 2 and less than 21 charaters");
+     lastname.focus();
+     return false;
+   }
+   if (email.value.match(/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/)) {
+     alert("Please enter a valid email!");
+     email.focus();
+     return false;
+   }
+   if (password.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/)) {
+     alert("Password must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character, and must be between 8 and 15 characters long.");
+     password.focus();
+     return false;
+   }
+   if (repassword.value.match(/^(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[^a-zA-Z0-9])(?!.*\s).{8,15}$/)) {
+     alert("Password must contain at least one lowercase letter, one uppercase letter, one numeric digit, and one special character, and must be between 8 and 15 characters long.");
+     repassword.focus();
+     return false;
+   }
+   if (gender.gender.value === "") {
+     alert("Please select your gender!");
+     return false;
+   }
+   if (!age.value.match(/^[1-9][0-9]{3}$/)) {
+     alert("Age must be 1 character or long number and first digit can't be 0!");
+     age.focus();
+     return false;
+   }
+   if (!phoneNumber.value.match(/^[1-9][0-9]{9}$/)) {
+     alert("Phone number must be 10 characters long number and first digit can't be 0!");
+     phoneNumber.focus();
+     return false;
+   }
+   if (address.value.length < 10 || address.value.length > 30) {
+     alert("Address length should be more than 10 and less than 31 charaters");
+     address.focus();
+     return false;
+   }
+   if (state.value.length < 10 || state.value.length > 20) {
+     alert("State length should be more than 10 and less than 21 charaters");
+     state.focus();
+     return false;
+   }
+   if (country.value === "") {
+     alert("Please select your country!");
+     return false;
+   }
+   if (language.value === "") {
+     alert("Please select your language!");
+     return false;
+   }
+   if (terms.value === "") {
+     alert("Please agree the conditions!");
+     return false;
+   }
+   return true;
+  }
+</script>
+</body>
+</html>

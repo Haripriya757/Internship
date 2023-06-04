@@ -1,0 +1,18 @@
+<html>
+<head>
+  <meta charset="utf-8">
+  <script>
+  function findReverse(){
+    let number = Number(document.getElementById("input_number").value);
+    let reverse = parseFloat(number.toString().split('').reverse().join(''))*Math.sign(number);
+    document.getElementById("result").innerHTML = reverse;
+  }
+  </script>
+</head>
+<body>
+  <h3>Reverse number</h3>
+  <input type="number" id="input_number"/><br><br>
+  <button onclick="findReverse()">Find Reverse</button>
+  <h4 id="result"></h4>
+</body>
+</html>
