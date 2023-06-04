@@ -1,0 +1,98 @@
+<html>
+<head>
+<meta charset="utf-8">
+<style>
+    body{
+        font-size: 20px;
+    }
+    table,tr,td{
+        border: 1px solid black;
+        border-collapse: collapse;
+    }
+    h2{
+        text-align: center;
+    }
+</style>
+</head>
+<body>
+    <h2 style="color: blue;">Registration Form</h2>
+    <table align="center">
+    <form method="post" action="Registration">
+    <tr>
+        <td>First Name:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td> Last Name: </td>        
+        <td></td>  
+    </tr>
+    <tr>    
+        <td>Email:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Password:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Re-enter Password:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td rowspan="2">Gender:</td>   
+        <td><input type="radio" name="male" size="%75"/> Male</td>
+        </tr>
+        <tr>
+        <td><input type="radio" name="female" size="%75"/> Female</td>
+    </tr>
+    <tr>
+        <td>Age:</td>
+        <td></td>
+    </tr>
+    <tr>
+        <td>Phone Number:</td>   
+        <td></td>   
+    </tr>
+    <tr>
+        <td>Address:</td>
+        <td><textarea cols="80" rows="5" value="address" size="%75">  
+        </textarea></td>
+    </tr>  
+      
+    <tr>
+        <td>State:</td>
+        <td></td> 
+    </tr>  
+    <tr>
+        <td>Country:</td>
+        <td><select>
+            <option value="Country">Choose your country</option>  
+            <option value="America">America</option>  
+            <option value="England">England</option>  
+            <option value="India">India</option>  
+            <option value="London">London</option>  
+            <option value="Russia">Russia</option>  
+            <option value="Srilanka">Srilanka</option> 
+        </select></td>
+    </tr>
+    <tr>
+        <td>Languages known:</td>
+        <td>
+            <input type="checkbox" name="english"/>English
+            <input type="checkbox" name="kannada"/>Kannada
+            <input type="checkbox" name="tamil"/>Tamil
+            <input type="checkbox" name="hindi"/>Hindi
+            <input type="checkbox" name="telugu"/>Telugu
+        </td>
+    </tr>
+    <tr>
+        <td colspan="2"><p><input type="checkbox" checked/>Hereby I declare all the given details are true</p></td>
+    </tr>
+        <td colspan="2"><p style="text-align: right;">Log in to <a href="www.ethnus.com">Ethnus</a> website</p></td>    
+    </table>
+    <div>
+    <button style="text-align: center;">Register</button> 
+    </div>
+</form>
+</body>  
+</html>  

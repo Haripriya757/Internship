@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <style>
+        body{
+            text-align: center;
+        }
+        .frame {
+            width: 300px;
+            height: 300px;
+            border: 1px solid black;
+        }
+        
+        .horizontal-frame {
+            display: flex;
+        }
+        
+        .vertical-frame {
+            display: flex;
+            flex-direction: column;
+            height: 300px;
+        }
+        
+        .content {
+            padding: 10px;
+            text-align: center;
+        }
+        
+        .container {
+            display: flex;
+            flex-wrap: wrap;
+        }
+        h1{
+            font-size: 18px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+            <div class="vertical-frame">
+                <div class="frame">
+                    <div class="content"><h1>Frame 1</h1>
+                    <p>Contents of Frame 1</p></div>
+                </div>
+                <div class="frame">
+                    <div class="content"><h1>Frame 2</h1>
+                        <p>Contents of Frame 2</p></div>
+                </div>
+            </div>
+            <div class="frame">
+            <div class="horizontal-frame">
+                <div class="frame">
+                    <div class="content"><h1>Frame 3</h1>
+                        <p>Contents of Frame 3</p></div>
+                </div>
+                <div class="frame">
+                    <div class="content"><h1>Frame 4</h1>
+                        <p>Contents of Frame 4</p></div>
+                </div>
+            </div>
+        </div>
+        </div>
+</body>
+</html>
