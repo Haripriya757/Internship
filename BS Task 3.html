@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+   <style>
+    body{
+        margin-top: 10px;
+        margin-left: 10%;
+        font-size: 18px;
+    }
+    </style>
+    </head>
+  <body>
+<form class="row g-3">
+  <div class="col-md-4">
+    <label for="validationServer01" class="form-label">First name</label>
+    <input type="text" class="form-control is-invalid" placeholder="First Name" id="validationServer01"  required>
+    <div class="invalid-feedback">
+      Please supply your first name
+    </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-md-4">
+    <label for="validationServer02" class="form-label">Last name</label>
+    <input type="text" class="form-control is-invalid" placeholder="Last Name" id="validationServer02" required>
+    <div class="invalid-feedback">
+      Please supply your last name
+    </div>
+    </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-md-4">
+    <label for="validationServerUsername" class="form-label">E-mail</label>
+    <div class="input-group has-validation">
+      <input type="email" class="form-control is-invalid" placeholder="E-mail Address" id="validationServerEmail" required>
+      <div id="validationServerEmailFeedback" class="invalid-feedback">
+        Please supply your email address
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-md-4">
+    <label for="validationServer03" class="form-label">Phone #</label>
+    <input type="tel" class="form-control is-invalid" placeholder="(845)555-1212" id="validationServer03" aria-describedby="validationServer03Feedback" required>
+    <div id="validationServer03Feedback" class="invalid-feedback">
+      Please supply your phone number
+    </div>
+  </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-md-4">
+    <label for="validationServer04" class="form-label">Address</label>
+    <input type="text" class="form-control is-invalid" placeholder="Address" id="validationServer04" aria-describedby="validationServer04Feedback" required>
+    <div id="validationServer04Feedback" class="invalid-feedback">
+      Please supply your address
+    </div>
+  </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-md-4">
+    <label for="validationServer05" class="form-label">City</label>
+    <input type="text" class="form-control is-invalid" placeholder="city" id="validationServer05" aria-describedby="validationServer05Feedback" required>
+    <div id="validationServer05Feedback" class="invalid-feedback">
+      Please provide a valid city
+    </div>
+  </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-md-3">
+    <label for="validationServer06" class="form-label">State</label>
+    <select  id="validationServer06" aria-describedby="validationServer06Feedback">
+      <option selected disabled value="">Please select your state</option>
+      <option>Tamilnadu</option>
+      <option>Karnataka</option>
+      <option>Kerala</option>
+      <option>Andhra Pradesh</option>
+      <option>Telangana</option>
+      <option>Himachal Pradesh</option>
+    </select>
+  </div>
+  </div>
+  <div class="mb-3">
+    <div class="col-md-3">
+    <label for="validationServer07" class="form-label">Do you have hostling?</label><br>
+    Yes&nbsp;<input type="radio" name="gender" value="yes">&emsp;
+    No&nbsp;<input type="radio" name="gender" value="no">
+  </div>
+  </div>
+  <div class="mb-3">
+  <div class="col-10">
+        <label for="validationServer08" class="form-label">Project Description</label>
+        <textarea id="validationServer08" rows="4" cols="80" placeholder="Project Description"></textarea> 
+    </div>
+  </div>
+  </div>
+<div class="mb-3">
+  <div class="col-12">
+    <button class="btn btn-primary" type="submit">Submit form</button>
+  </div>
+</div>
+</form>
+<script>
+    (function () {
+'use strict'
+
+var forms = document.querySelectorAll('.needs-validation')
+
+Array.prototype.slice.call(forms)
+.forEach(function (form) {
+  form.addEventListener('submit', function (event) {
+    if (!form.checkValidity()) {
+      event.preventDefault()
+      event.stopPropagation()
+    }
+
+    form.classList.add('was-validated')
+  }, false)
+})
+})()
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+  </body>
+</html>
