@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>2 Task3 1</title>
+<style>
+#box{
+  width: 520px;
+  border: 2px solid black;
+  padding: 10px;
+  position: absolute;
+  right: 400px;
+  align: center;
+  float: left;
+}
+ul {
+  font-family: "Arial Bold "; 
+  font-size: 21px;
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  width: 515px;
+  background-color: #D5D6EA;
+}
+li{
+  display: inline;
+  float: left;
+}
+
+li a {
+  display: block;
+  color: #000;
+  padding: 14px 25px;
+  text-decoration: none;
+  color: blue;
+}
+
+li a.active {
+  background-color: grey;
+  color: white;
+}
+
+li a:hover:not(.active) {
+  background-color: #555;
+  color: white;
+}
+li a:hover{
+  background-color: grey;
+}
+h3{
+  text-align: center;
+}
+</style>
+</head>
+<body>
+
+<h3>Horizontal Navigation Bar</h3>
+<div id="box">
+<ul>
+  <li><a class="active" href="#home">Home</a></li>
+  <li><a href="#java">Java</a></li>
+  <li><a href="#html">HTML</a></li>
+  <li><a href="#css">CSS</a></li>
+  <li><a href="#bootstrap">Bootstrap</a></li>
+</ul>
+</div>
+</body>
+</html>
